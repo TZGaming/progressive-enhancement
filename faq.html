@@ -20,41 +20,23 @@
 				padding-bottom: 35px;
 			}
 
-			details:nth-child(1) {
-				&[open] {
-					background-color: var(--lavender);
-				}
-			}
-
-			details:nth-child(2) {
-				&[open] {
-					background-color: var(--turquoise);
-				}
-			}
-
-			details:nth-child(3) {
-				&[open] {
-					background-color: var(--call-to-action);
-				}
-			}
-
 			details {
 				border: 1px black solid;
 				width: fit-content;
 				border-radius: 8px;
-				padding: 1rem .5rem 1rem .5rem;
 				margin-bottom: 25px;
 
 				&[open] {
 					border: 1px rgba(0, 0, 0, 0) solid;
 					max-width: 750px;
+					background-color: transparent;
 
 					&::details-content {
 						width: fit-content;
 					}
 
 					summary {
-						margin-bottom: 35px;
+						padding-bottom: 15px;
 					}
 
 					img {
@@ -62,13 +44,19 @@
 					}
 				}
 
+				p {
+					margin: 0;
+					padding: 1rem .5rem 1rem .5rem;
+					border-radius: 0px 8px 8px 8px;
+				}
+
 				summary {
 					display: flex;
 					flex-direction: row;
 					align-items: center;
 					gap: .3rem;
-					font-weight: bold;
 					cursor: pointer;
+					padding: 1rem .5rem 1rem .5rem;
 				}
 
 				img {
@@ -76,6 +64,26 @@
 					height: 25px;
 					transition: transform .2s;
 				}
+			}
+
+			details:nth-child(1)[open] summary,
+			details:nth-child(1)[open] p {
+				background-color: var(--lavender);
+			}
+
+			details:nth-child(2)[open] summary,
+			details:nth-child(2)[open] p {
+				background-color: var(--turquoise);
+			}
+
+			details:nth-child(3)[open] summary,
+			details:nth-child(3)[open] p {
+				background-color: var(--call-to-action);
+			}
+
+			details[open] summary {
+				width: fit-content;
+				border-radius: 8px 8px 0 0;
 			}
 
 			details > summary {
@@ -96,7 +104,7 @@
 					<img src="assets/SVG/plus.svg" alt="expand">
 					Wat is frontend development?
 				</summary>
-				Een frontend developer ontwerpt en bouwt websites in HTML, CSS en Javascript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.
+				<p>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en Javascript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.</p>
 			</details>
 
 			<details>
@@ -104,7 +112,7 @@
 					<img src="assets/SVG/plus.svg" alt="expand">
 					Moet ik al kunnen coderen?
 				</summary>
-				Nee, je hebt helemaal geen voorkennis nodig om te beginnen aan deze opleiding, we kunnen je alles leren! Als je wel al voorkennis hebt, is dat alleen maar goed, dan kunnen we je helpen je skills te verbeteren en te verdiepen in de stof.
+				<p>Nee, je hebt helemaal geen voorkennis nodig om te beginnen aan deze opleiding, we kunnen je alles leren! Als je wel al voorkennis hebt, is dat alleen maar goed, dan kunnen we je helpen je skills te verbeteren en te verdiepen in de stof.</p>
 			</details>
 
 			<details>
@@ -112,9 +120,9 @@
 					<img src="assets/SVG/plus.svg" alt="expand">
 					Wat is een Associate Degree?
 				</summary>
-				Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5. Een Ad slaat een brug tussen het mbo-4 (niveau 4) en een hbo-bachelor (niveau 6). Met een Associate degree kies je voor een praktijkgerichte hbo-opleiding; je wordt opgeleid voor een beroep dat aansluit bij de praktijk. In dit geval word je opgeleid tot ‘frontend designer/developer' of kortweg ‘frontender’. Frontenders ontwerpen en maken interactieve, toegankelijke toepassingen voor het web. Frontenders werken binnen het gebied van software development, interactieontwerp en digitaal visueel ontwerp.
+				<p>Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5. Een Ad slaat een brug tussen het mbo-4 (niveau 4) en een hbo-bachelor (niveau 6). Met een Associate degree kies je voor een praktijkgerichte hbo-opleiding; je wordt opgeleid voor een beroep dat aansluit bij de praktijk. In dit geval word je opgeleid tot ‘frontend designer/developer' of kortweg ‘frontender’. Frontenders ontwerpen en maken interactieve, toegankelijke toepassingen voor het web. Frontenders werken binnen het gebied van software development, interactieontwerp en digitaal visueel ontwerp.
 				<br><br>
-				Na afronding van deze tweejarige hbo-opleiding, krijg je een wettelijk erkend hbo-diploma met de graad Associate degree. Met dit Ad-diploma kun je direct aan de slag in het werkveld of doorstromen naar de bacheloropleiding Communication and Multimedia Design (CMD).
+				Na afronding van deze tweejarige hbo-opleiding, krijg je een wettelijk erkend hbo-diploma met de graad Associate degree. Met dit Ad-diploma kun je direct aan de slag in het werkveld of doorstromen naar de bacheloropleiding Communication and Multimedia Design (CMD).</p>
 			</details>
 		</section>
 	</body>
