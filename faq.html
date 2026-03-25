@@ -7,15 +7,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 		<link href="assets/styles.css" rel="stylesheet">
 		<style>
-			:root {
-				--white: #fff;
-				--blueberry: #050542;
-				--turquoise: #66e5bf;
-				--lavender: #a675f5;
-				--attention: #050542;
-				--call-to-action: #fffc86;
-			}
-
 			h1 {
 				padding-bottom: 15px;
 			}
@@ -63,30 +54,27 @@
 
 			details:nth-child(1)[open] summary,
 			details:nth-child(1)[open] p {
-				background-color: white;
 				border: 1px black solid;
-				@supports (background-color: var(--lavender)) {
-					background-color: var(--lavender);
+				@supports (background-color: var(--purple)) {
+					background-color: var(--purple);
 					border: none;
 				}
 			}
 
 			details:nth-child(2)[open] summary,
 			details:nth-child(2)[open] p {
-				background-color: white;
 				border: 1px black solid;
-				@supports (background-color: var(--turquoise)) {
-					background-color: var(--turquoise);
+				@supports (background-color: var(--green)) {
+					background-color: var(--green);
 					border: none;
 				}
 			}
 
 			details:nth-child(3)[open] summary,
 			details:nth-child(3)[open] p {
-				background-color: white;
 				border: 1px black solid;
-				@supports (background-color: var(--call-to-action)) {
-					background-color: var(--call-to-action);
+				@supports (background-color: var(--yellow)) {
+					background-color: var(--yellow);
 					border: none;
 				}
 			}
