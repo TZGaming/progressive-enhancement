@@ -1,30 +1,95 @@
 <!doctype html>
 <html lang="nl">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>Switch control / Progressive Enhancement / FDND</title>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<link href="assets/styles.css" rel="stylesheet">
-		<style>
-			/* Schrijf hier gewoon je CSS voor dit component */
 
-			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Switch control / Progressive Enhancement / FDND</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+		rel="stylesheet">
+	<link href="assets/styles.css" rel="stylesheet">
+	<style>
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 75px;
+			height: 40px;
+			font-weight: bold;
+			font-size: 14px;
+		}
 
-			/* Hint: Hoe ver ga je qua styling? Vraag jezelf dit altijd af */
-		</style>
-	</head>
-	<body>
-		<h1>Switch control</h1>
-		
-		<!-- Hint: Safari heeft hiervoor iets bedacht, maar is dat al een standaard?
+		/* Verberg de standaard HTML checkbox */
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #acacac;
+			-webkit-transition: .3s;
+			transition: .3s;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 32px;
+			width: 32px;
+			left: 4px;
+			bottom: 4px;
+			background-color: white;
+			-webkit-transition: .3s;
+			transition: .3s;
+		}
+
+		input:checked+.slider {
+			background-color: var(--green);
+		}
+
+		input:checked+.slider:before {
+			-webkit-transform: translateX(32px);
+			-ms-transform: translateX(32px);
+			transform: translateX(32px);
+			content: "aan";
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.slider.round {
+			border-radius: 34px;
+		}
+
+		.slider.round:before {
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Switch control</h1>
+
+	<label class="switch">
+		<input type="checkbox">
+		<span class="slider round"></span>
+	</label>
+
+	<!-- Hint: Safari heeft hiervoor iets bedacht, maar is dat al een standaard?
 		     Wat gebeurt er in browsers die dat nog niet ondersteunen? -->
 
-		<details open>
-			<summary>Demo video</summary>
-			<video src="assets/switch.mp4" width="119" height="67" controls muted autoplay loop>
-				<a href="assets/switch.mp4">assets/switch.mp4</a>
-			</video>
-		</details>
-	</body>
+	<!-- <details open>
+		<summary>Demo video</summary>
+		<video src="assets/switch.mp4" width="119" height="67" controls muted autoplay loop>
+			<a href="assets/switch.mp4">assets/switch.mp4</a>
+		</video>
+	</details> -->
+</body>
+
 </html>
