@@ -33,8 +33,11 @@
 			right: 0;
 			bottom: 0;
 			background-color: #acacac;
-			-webkit-transition: .3s;
-			transition: .3s;
+
+			@media (prefers-reduced-motion: no-preference) {
+				-webkit-transition: .3s;
+				transition: .3s;
+			}
 		}
 
 		.slider:before {
@@ -45,8 +48,11 @@
 			left: 4px;
 			bottom: 4px;
 			background-color: white;
-			-webkit-transition: .3s;
-			transition: .3s;
+			
+			@media (prefers-reduced-motion: no-preference) {
+				-webkit-transition: .3s;
+				transition: .3s;
+			}
 		}
 
 		input:checked+.slider {
